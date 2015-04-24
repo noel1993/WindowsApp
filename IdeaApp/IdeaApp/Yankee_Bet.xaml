@@ -1,0 +1,105 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="IdeaApp.Yankee_Bet"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <ScrollViewer Height="768" Width="480">
+        <Grid x:Name="LayoutRoot" Height="1146" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="Images/backgroundforapp.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            </Grid.Background>
+            <Grid>
+
+            </Grid>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel Grid.Row="0" Margin="0,17,0,28" Background="Aqua">
+                <TextBlock Foreground="DarkGreen" FontWeight="Bold" FontStyle="Italic" Text="Yankee Bet" HorizontalAlignment="Center" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <TextBox x:Name="txtBokStakeYankee1" HorizontalAlignment="Center" Height="72" Margin="132,38,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" />
+                <TextBox x:Name="txtBox1Yankee1" HorizontalAlignment="Center" Height="72" Margin="29,202,329,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number"/>
+                <TextBox x:Name="txtBox2Yankee1" HorizontalAlignment="Center" Height="72" Margin="132,202,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+                <TextBlock Text="Winnings" FontSize="30" FontWeight="Bold" Foreground="Blue" Margin="150,835,117,87"/>
+                <TextBlock Foreground="Black" FontSize="48" FontWeight="Bold" x:Name="txtBox3Yankee1" HorizontalAlignment="Center" Height="72" Margin="132,939,139,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185"/>
+                <TextBlock Foreground="DarkOrange" FontSize="48" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="29,134,0,0" TextWrapping="Wrap" Text="Odds" VerticalAlignment="Top" Height="61" Width="132"/>
+                <TextBlock Foreground="DarkOrange" FontSize="48" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="228,110,0,0" TextWrapping="Wrap" Text="Each Way Terms" VerticalAlignment="Top" Height="123" Width="228" RenderTransformOrigin="0.241,0.545"/>
+                <TextBlock Foreground="DarkOrange" FontSize="48" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="150,-26,0,0" TextWrapping="Wrap" Text="Stake" VerticalAlignment="Top" RenderTransformOrigin="0.4,-0.434"/>
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="Quarter_OddsYankee1" Content="1/4" HorizontalAlignment="Left" Margin="235,212,0,0" VerticalAlignment="Top" />
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="Fifth_OddsYankee1" Content="1/5" HorizontalAlignment="Left" Margin="334,212,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.346,0.5" />
+                <CheckBox Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name ="EW_CheckYankee1" Content="E/W" HorizontalAlignment="Left" Margin="255,38,0,0" VerticalAlignment="Top" Checked="EW_CheckYankee1_Checked"/>
+                <TextBox x:Name="QuaterTextYankee1" HorizontalAlignment="Left" Margin="278,261,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" RenderTransformOrigin="-0.151,-1.758" Visibility="Collapsed" />
+                <TextBox x:Name="FifthTextYankee1" HorizontalAlignment="Left" Margin="350,262,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" RenderTransformOrigin="-0.151,-1.758" Visibility="Collapsed" />
+                <TextBox x:Name="txtBox1Yankee2" HorizontalAlignment="Center" Height="72" Margin="29,355,329,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" />
+                <TextBox x:Name="txtBox2Yankee2" HorizontalAlignment="Center" Height="72" Margin="132,355,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+                <TextBlock Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="15,333,0,0" TextWrapping="Wrap" Text="----------------------------------------------------" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Margin="15,487,0,0" TextWrapping="Wrap" Text="----------------------------------------------------" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtBox1Yankee3" HorizontalAlignment="Center" Height="72" Margin="26,519,332,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="0.418,2.639"/>
+                <TextBox x:Name="txtBox2Yankee3" HorizontalAlignment="Center" Height="72" Margin="132,519,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+                <TextBlock Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="26,670,0,0" TextWrapping="Wrap" Text="----------------------------------------------------" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtBox1Yankee4" HorizontalAlignment="Center" Height="72" Margin="29,702,329,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="0.418,2.639"/>
+                <TextBox x:Name="txtBox2Yankee4" HorizontalAlignment="Right" Height="72" Margin="0,702,226,-20" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+
+            </Grid>
+            <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="WinYankee1" Content="Win" HorizontalAlignment="Left" Margin="12,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="WinYankee1_Checked"/>
+            <RadioButton x:Name="PlaceYankee1" Content="Place" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="123,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="PlaceYankee1_Checked"/>
+            <RadioButton x:Name="Yankee1" Content="Lose" HorizontalAlignment="Left" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Margin="246,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="Yankee1_Checked"/>
+            <RadioButton x:Name="NRYankee1" Content="N/R" HorizontalAlignment="Left" Margin="358,282,0,0" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Grid.Row="1" VerticalAlignment="Top" Checked="NRYankee1_Checked"/>
+
+            <Grid x:Name ="RadioButton_Group" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="WinYankee2" Content="Win" HorizontalAlignment="Left" Margin="0,434,0,0" VerticalAlignment="Top" Checked="WinYankee2_Checked"/>
+                <RadioButton x:Name="PlaceYankee2" Content="Place" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="111,434,0,0" VerticalAlignment="Top" Checked="PlaceYankee2_Checked"/>
+                <RadioButton x:Name ="LoseYankee2" Content="Lose" HorizontalAlignment="Left" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Margin="229,434,0,0" VerticalAlignment="Top" Checked="LoseYankee2_Checked"/>
+                <RadioButton x:Name="NRYankee2" Content="N/R" HorizontalAlignment="Left" Margin="341,434,0,0" VerticalAlignment="Top" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Checked="NRYankee2_Checked"/>
+            </Grid>
+
+            <Grid x:Name ="RadioButton_Group2" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="Quarter_OddsYankee2" Content="1/4" HorizontalAlignment="Left" Margin="235,355,0,0" VerticalAlignment="Top" />
+                <RadioButton x:Name="Fifth_OddsYankee2" Content="1/5" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="332,355,0,0" VerticalAlignment="Top" Height="71" />
+            </Grid>
+
+            <Grid x:Name ="RadioButton_Group3" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="Quarter_OddsYankee3" Content="1/4" HorizontalAlignment="Left" Margin="235,518,0,0" VerticalAlignment="Top"  />
+                <RadioButton x:Name="Fifth_OddsYankee3" Content="1/5" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="332,519,0,0" VerticalAlignment="Top" Height="71" />
+            </Grid>
+
+            <Grid x:Name ="RadioButton_Group4" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="WinYankee3" Content="Win" HorizontalAlignment="Left" Margin="0,598,0,0" VerticalAlignment="Top" Checked="WinYankee3_Checked"/>
+                <RadioButton x:Name="PlaceYankee3" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Content="Place" HorizontalAlignment="Left" Margin="111,598,0,0" VerticalAlignment="Top" Checked="PlaceYankee3_Checked"/>
+                <RadioButton x:Name ="LoseYankee3" Content="Lose" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="229,598,0,0" VerticalAlignment="Top" Checked="LoseYankee3_Checked"/>
+                <RadioButton x:Name="NRYankee3" Content="N/R" HorizontalAlignment="Left" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Margin="341,598,0,0" VerticalAlignment="Top" Checked="NRYankee3_Checked"/>
+            </Grid>
+            <Grid x:Name="RadioButton_Group5" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="Quarter_OddsYankee4" Content="1/4" HorizontalAlignment="Left" Margin="235,705,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.505,-0.972" Height="88"  />
+                <RadioButton x:Name="Fifth_OddsYankee4" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Content="1/5" HorizontalAlignment="Left" Margin="332,705,0,0" VerticalAlignment="Top" Height="88" />
+            </Grid>
+            <Grid x:Name="RadioButton_Group6" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="WinYankee4" Content="Win" HorizontalAlignment="Left" Margin="0,766,0,0" VerticalAlignment="Top" Checked="WinYankee4_Checked" RenderTransformOrigin="0.481,3.556" Height="74"/>
+                <RadioButton x:Name="PlaceYankee4" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Content="Place" HorizontalAlignment="Left" Margin="111,766,0,0" VerticalAlignment="Top" Checked="PlaceYankee4_Checked" Height="75"/>
+                <RadioButton x:Name ="LoseYankee4" Content="Lose" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="229,766,0,0" VerticalAlignment="Top" Checked="LoseYankee4_Checked" Height="75"/>
+                <RadioButton x:Name="NRYankee4" Content="N/R" HorizontalAlignment="Left" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Margin="341,766,0,0" VerticalAlignment="Top" Checked="NRYankee4_Checked" Height="75"/>
+
+            </Grid>
+
+        </Grid>
+
+    </ScrollViewer>
+
+</phone:PhoneApplicationPage>

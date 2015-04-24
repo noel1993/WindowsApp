@@ -1,0 +1,91 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="IdeaApp.Treble_Bet"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <ScrollViewer Height="768" Width="480">
+        <Grid x:Name="LayoutRoot" Height="879" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="Images/backgroundforapp.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            </Grid.Background>
+            <Grid>
+
+            </Grid>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel Grid.Row="0" Margin="2,10,0,35" Background="Aqua">
+                <TextBlock FontWeight="Bold" FontStyle="Italic" Foreground="DarkGreen" Text="Treble Bet" HorizontalAlignment="Center" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <TextBox x:Name="txtBokStakeTreble1" HorizontalAlignment="Center" Height="72" Margin="129,38,229,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" />
+                <TextBox x:Name="txtBox1Treble1" HorizontalAlignment="Center" Height="72" Margin="29,202,329,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number"/>
+                <TextBox x:Name="txtBox2Treble1" HorizontalAlignment="Center" Height="72" Margin="132,202,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+                <TextBox x:Name="txtBox3Treble1" HorizontalAlignment="Center" Height="72" Margin="132,667,139,-96" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185"  InputScope= "Number"  IsReadOnly="True"/>
+                <TextBlock FontSize="48" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="52,115,0,0" TextWrapping="Wrap" Text="Odds" VerticalAlignment="Top" Height="63" Width="132"/>
+                <TextBlock FontSize="48" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="218,91,0,0" TextWrapping="Wrap" Text="Each Way Terms" VerticalAlignment="Top" Height="121" Width="228" RenderTransformOrigin="0.241,0.545"/>
+                <TextBlock FontSize="48" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="129,-26,0,0" TextWrapping="Wrap" Text="Stake" VerticalAlignment="Top" RenderTransformOrigin="-0.01,-0.504"/>
+                <RadioButton x:Name="Quarter_OddsTreble1" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Content="1/4" HorizontalAlignment="Left" Margin="235,212,0,0" VerticalAlignment="Top" />
+                <RadioButton x:Name="Fifth_OddsTreble1" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Content="1/5" HorizontalAlignment="Left" Margin="332,212,0,707" Checked="Fifth_OddsTreble1_Checked" />
+                <CheckBox x:Name ="EW_CheckTreble1" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Content="E/W" HorizontalAlignment="Left" Margin="260,43,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="QuaterTextTreble1" HorizontalAlignment="Left" Margin="278,261,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" RenderTransformOrigin="-0.151,-1.758" Visibility="Collapsed" />
+                <TextBox x:Name="FifthTextTreble1" HorizontalAlignment="Left" Margin="350,262,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" RenderTransformOrigin="-0.151,-1.758" Visibility="Collapsed" />
+                <TextBox x:Name="txtBox1Treble2" HorizontalAlignment="Center" Height="72" Margin="29,355,329,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" />
+                <TextBox x:Name="txtBox2Treble2" HorizontalAlignment="Center" Height="72" Margin="132,355,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+
+                <TextBlock Foreground="Lime" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="15,333,0,0" TextWrapping="Wrap" Text="----------------------------------------------------" VerticalAlignment="Top"/>
+                <TextBlock Foreground="Lime" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="15,487,0,0" TextWrapping="Wrap" Text="----------------------------------------------------" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtBox1Treble3" HorizontalAlignment="Center" Height="72" Margin="26,519,332,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="0.418,2.639"/>
+                <TextBox x:Name="txtBox2Treble3" HorizontalAlignment="Center" Height="72" Margin="132,519,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+
+            </Grid>
+            <RadioButton x:Name="WinTreble1" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Content="Win" HorizontalAlignment="Left" Margin="12,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="WinTreble1_Checked"/>
+            <RadioButton x:Name="PlaceTreble1" Content="Place" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="123,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="PlaceTreble1_Checked"/>
+            <RadioButton x:Name="Treble1" Content="Lose" HorizontalAlignment="Left" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Margin="246,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="Treble1_Checked"/>
+            <RadioButton x:Name="NRTreble1" Content="N/R" HorizontalAlignment="Left" Margin="358,282,0,0" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Grid.Row="1" VerticalAlignment="Top" Checked="NRTreble1_Checked"/>
+
+            <Grid x:Name ="RadioButton_Group" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton x:Name="WinTreble2" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Content="Win" HorizontalAlignment="Left" Margin="0,434,0,0" VerticalAlignment="Top" Checked="WinTreble2_Checked"/>
+                <RadioButton x:Name="PlaceTreble2" Content="Place" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="111,434,0,0" VerticalAlignment="Top" Checked="PlaceTreble2_Checked"/>
+                <RadioButton x:Name ="LoseTreble2" Content="Lose"  HorizontalAlignment="Left" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Margin="229,434,0,0" VerticalAlignment="Top" Checked="LoseTreble2_Checked"/>
+                <RadioButton x:Name="NRTreble2" Content="N/R" HorizontalAlignment="Left" Margin="341,434,0,0" VerticalAlignment="Top" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Checked="NRTreble2_Checked"/>
+            </Grid>
+
+            <Grid x:Name ="RadioButton_Group2" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton x:Name="Quarter_OddsTreble2" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Content="1/4" HorizontalAlignment="Left" Margin="235,355,0,0" VerticalAlignment="Top" />
+                <RadioButton x:Name="Fifth_OddsTreble2" Content="1/5" HorizontalAlignment="Left" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Margin="332,355,0,0" VerticalAlignment="Top" Height="71" />
+            </Grid>
+
+            <Grid x:Name ="RadioButton_Group3" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton x:Name="Quarter_OddsTreble3" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Content="1/4" HorizontalAlignment="Left" Margin="235,518,0,0" VerticalAlignment="Top"  />
+                <RadioButton x:Name="Fifth_OddsTreble3" Content="1/5" HorizontalAlignment="Left" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Margin="332,519,0,0" VerticalAlignment="Top" Height="71" />
+            </Grid>
+
+            <Grid x:Name ="RadioButton_Group4" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton x:Name="WinTreble3" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Content="Win" HorizontalAlignment="Left" Margin="0,598,0,0" VerticalAlignment="Top" Checked="WinTreble3_Checked"/>
+                <RadioButton x:Name="PlaceTreble3" Content="Place" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="111,598,0,0" VerticalAlignment="Top" Checked="PlaceTreble3_Checked"/>
+                <RadioButton x:Name ="LoseTreble3" Content="Lose" HorizontalAlignment="Left" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Margin="229,598,0,0" VerticalAlignment="Top" Checked="LoseTreble3_Checked"/>
+                <RadioButton x:Name="NRTreble3" Content="N/R" HorizontalAlignment="Left" Margin="341,598,0,0" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" VerticalAlignment="Top" Checked="NRTreble3_Checked"/>
+            </Grid>
+
+        </Grid>
+
+    </ScrollViewer>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,92 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="IdeaApp.Trixie_Bet"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <ScrollViewer Height="768" Width="480">
+        <Grid x:Name="LayoutRoot" Height="879" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="Images/backgroundforapp.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            </Grid.Background>
+            <Grid>
+            </Grid>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel Grid.Row="0" Margin="-5,10,0,35" Background="Aqua">
+                <TextBlock Text="Trixie Bet" FontWeight="Bold" FontStyle="Italic" Foreground="DarkGreen" HorizontalAlignment="Center" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <TextBox x:Name="txtBokStakeTrixie1" HorizontalAlignment="Center" Height="72" Margin="129,41,229,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" />
+                <TextBox x:Name="txtBox1Trixie1" HorizontalAlignment="Center" Height="72" Margin="29,202,329,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number"/>
+                <TextBox x:Name="txtBox2Trixie1" HorizontalAlignment="Center" Height="72" Margin="132,202,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+                <TextBox x:Name="txtBox3Trixie1" HorizontalAlignment="Center" Height="72" Margin="132,667,139,-96" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185"  InputScope= "Number"  IsReadOnly="True"/>
+                <TextBlock Foreground="DarkOrange" FontSize="48" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="41,118,0,0" TextWrapping="Wrap" Text="Odds" VerticalAlignment="Top" Height="79" Width="132"/>
+                <TextBlock Foreground="DarkOrange" FontSize="48" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="218,98,0,0" TextWrapping="Wrap" Text="Each Way Terms" VerticalAlignment="Top" Height="129" Width="228" RenderTransformOrigin="0.241,0.545"/>
+                <TextBlock Foreground="DarkOrange" FontSize="48" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="129,-23,0,0" TextWrapping="Wrap" Text="Stake" VerticalAlignment="Top"/>
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="Quarter_OddsTrixie1" Content="1/4" HorizontalAlignment="Left" Margin="235,212,0,0" VerticalAlignment="Top" />
+
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="Fifth_OddsTrixie1" Content="1/5" HorizontalAlignment="Left" Margin="339,212,0,0" VerticalAlignment="Top" />
+
+                
+                <CheckBox x:Name ="EW_CheckTrixie1" Content="E/W" HorizontalAlignment="Left" Margin="261,42,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="QuaterTextTrixie1" HorizontalAlignment="Left" Margin="278,261,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" RenderTransformOrigin="-0.151,-1.758" Visibility="Collapsed" />
+                <TextBox x:Name="FifthTextTrixie1" HorizontalAlignment="Left" Margin="350,262,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" RenderTransformOrigin="-0.151,-1.758" Visibility="Collapsed" />
+                <TextBox x:Name="txtBox1Trixie2" HorizontalAlignment="Center" Height="72" Margin="29,355,329,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" />
+                <TextBox x:Name="txtBox2Trixie2" HorizontalAlignment="Center" Height="72" Margin="132,355,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+
+                <TextBlock Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="15,333,0,0" TextWrapping="Wrap" Text="----------------------------------------------------" VerticalAlignment="Top"/>
+                <TextBlock Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="15,487,0,0" TextWrapping="Wrap" Text="----------------------------------------------------" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtBox1Trixie3" HorizontalAlignment="Center" Height="72" Margin="26,519,332,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="0.418,2.639"/>
+                <TextBox x:Name="txtBox2Trixie3" HorizontalAlignment="Center" Height="72" Margin="132,519,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+
+            </Grid>
+            <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="WinTrixie1" Content="Win" HorizontalAlignment="Left" Margin="12,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="WinTrixie1_Checked"/>
+            <RadioButton x:Name="PlaceTrixie1" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Content="Place" HorizontalAlignment="Left" Margin="123,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="PlaceTrixie1_Checked"/>
+            <RadioButton x:Name="Trixie1" Content="Lose" HorizontalAlignment="Left" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Margin="246,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="Trixie1_Checked"/>
+            <RadioButton x:Name="NRTrixie1" Content="N/R" HorizontalAlignment="Left" Margin="358,282,0,0" Grid.Row="1" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" VerticalAlignment="Top" Checked="NRTrixie1_Checked"/>
+
+            <Grid x:Name ="RadioButton_Group" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="WinTrixie2" Content="Win" HorizontalAlignment="Left" Margin="0,434,0,0" VerticalAlignment="Top" Checked="WinTrixie2_Checked"/>
+                <RadioButton x:Name="PlaceTrixie2" Content="Place" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="111,434,0,0" VerticalAlignment="Top" Checked="PlaceTrixie2_Checked"/>
+                <RadioButton x:Name ="LoseTrixie2" Content="Lose" HorizontalAlignment="Left" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Margin="229,434,0,0" VerticalAlignment="Top" Checked="LoseTrixie2_Checked"/>
+                <RadioButton x:Name="NRTrixie2" Content="N/R" HorizontalAlignment="Left" Margin="341,434,0,0" VerticalAlignment="Top" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Checked="NRTrixie2_Checked"/>
+            </Grid>
+
+            <Grid x:Name ="RadioButton_Group2" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="Quarter_OddsTrixie2" Content="1/4" HorizontalAlignment="Left" Margin="235,355,0,0" VerticalAlignment="Top" />
+                <RadioButton x:Name="Fifth_OddsTrixie2" Content="1/5" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="332,355,0,0" VerticalAlignment="Top" Height="71" />
+            </Grid>
+
+            <Grid x:Name ="RadioButton_Group3" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="Quarter_OddsTrixie3" Content="1/4" HorizontalAlignment="Left" Margin="235,518,0,0" VerticalAlignment="Top"  />
+                <RadioButton x:Name="Fifth_OddsTrixie3" Content="1/5" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="332,519,0,0" VerticalAlignment="Top" Height="71" />
+            </Grid>
+
+            <Grid x:Name ="RadioButton_Group4" Grid.Row="1" Margin="12,0,12,0">
+                <RadioButton Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" x:Name="WinTrixie3" Content="Win" HorizontalAlignment="Left" Margin="0,598,0,0" VerticalAlignment="Top" Checked="WinTrixie3_Checked"/>
+                <RadioButton x:Name="PlaceTrixie3" Content="Place" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Margin="111,598,0,0" VerticalAlignment="Top" Checked="PlaceTrixie3_Checked"/>
+                <RadioButton x:Name ="LoseTrixie3" Content="Lose" HorizontalAlignment="Left" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Margin="229,598,0,0" VerticalAlignment="Top" Checked="LoseTrixie3_Checked"/>
+                <RadioButton x:Name="NRTrixie3" Content="N/R" HorizontalAlignment="Left" Margin="341,598,0,0" VerticalAlignment="Top" Foreground="DarkOrange" FontWeight="Bold" FontStyle="Italic" Checked="NRTrixie3_Checked"/>
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+
+</phone:PhoneApplicationPage>

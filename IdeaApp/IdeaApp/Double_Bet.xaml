@@ -1,0 +1,73 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="IdeaApp.Double_Bet"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Images/backgroundforapp.jpg" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <Grid>
+
+        </Grid>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="-10,0,10,45" Background="Aqua">
+            <TextBlock Text="Double Bet" Foreground="DarkGreen" HorizontalAlignment="Center" Margin="62,-7,52,0" Style="{StaticResource PhoneTextTitle1Style}" Height="84" FontWeight="Bold" FontStyle="Italic"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBox x:Name="txtBokStakeDouble1" HorizontalAlignment="Center" Height="72" Margin="129,18,229,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number"/>
+            <TextBox x:Name="txtBox1Double1" HorizontalAlignment="Center" Height="72" Margin="29,202,329,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number"/>
+            <TextBox x:Name="txtBox2Double1" HorizontalAlignment="Center" Height="72" Margin="132,202,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+            <TextBox x:Name="txtBox3Double1" HorizontalAlignment="Center" Height="72" Margin="129,497,142,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185"  InputScope= "Number"  IsReadOnly="True" TextChanged="txtBox3Double1_TextChanged"/>
+            <TextBlock Foreground="Lime" FontStyle="Italic" FontWeight="Bold" FontSize="48" HorizontalAlignment="Left" Margin="59,136,0,0" TextWrapping="Wrap" Text="Odds" VerticalAlignment="Top" Height="66" Width="138"/>
+            <TextBlock Foreground="Lime" FontStyle="Italic" FontWeight="Bold" FontSize="48" HorizontalAlignment="Left" Margin="218,84,0,0" TextWrapping="Wrap" Text="Each Way Terms" VerticalAlignment="Top" Height="123" Width="228" RenderTransformOrigin="0.241,0.545"/>
+            <TextBlock Foreground="Lime" FontStyle="Italic" FontWeight="Bold" FontSize="48" HorizontalAlignment="Left" Margin="126,-33,0,0" TextWrapping="Wrap" Text="Stake" VerticalAlignment="Top" RenderTransformOrigin="0.298,-0.248"/>
+            <RadioButton Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name="Quarter_OddsDouble1" Content="1/4" HorizontalAlignment="Left" Margin="235,212,0,0" VerticalAlignment="Top" Checked="Quarter_OddsDouble1_Checked" />
+            <RadioButton Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name="Fifth_OddsDouble1" Content="1/5" HorizontalAlignment="Left" Margin="332,212,0,0" VerticalAlignment="Top" Height="71" Checked="Fifth_OddsDouble1_Checked" />
+            <CheckBox Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name ="EW_CheckDouble1" Content="E/W" HorizontalAlignment="Left" Margin="262,19,0,0" VerticalAlignment="Top" Checked="EW_CheckDouble1_Checked" />
+            <TextBox Name="QuaterTextDouble1" HorizontalAlignment="Left" Margin="278,261,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" RenderTransformOrigin="-0.151,-1.758" Visibility="Collapsed" />
+            <TextBox Name="FifthTextDouble1" HorizontalAlignment="Left" Margin="350,262,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" RenderTransformOrigin="-0.151,-1.758" Visibility="Collapsed" />
+            <TextBox x:Name="txtBox1Double1_Copy" HorizontalAlignment="Center" Height="72" Margin="29,355,329,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number"/>
+            <TextBox x:Name="txtBox2Double1_Copy" HorizontalAlignment="Center" Height="72" Margin="132,355,226,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"  InputScope= "Number" RenderTransformOrigin="-0.046,0.493"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="29,333,0,0" TextWrapping="Wrap" Text="----------------------------------------------------" VerticalAlignment="Top"/>
+
+        </Grid>
+        <RadioButton Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name="WinDouble1" Content="Win" HorizontalAlignment="Left" Margin="12,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="WinDouble1_Checked"/>
+        <RadioButton Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name="PlaceDouble1" Content="Place" HorizontalAlignment="Left" Margin="123,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="PlaceDouble1_Checked"/>
+        <RadioButton Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name="Double1" Content="Lose" HorizontalAlignment="Left" Margin="246,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="Double1_Checked"/>
+        <RadioButton Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name="NRDouble1" Content="N/R" HorizontalAlignment="Left" Margin="363,282,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="NRDouble1_Checked"/>
+
+        <Grid x:Name ="RadioButton_Group" Grid.Row="1" Margin="12,0,12,0">
+            <RadioButton Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name="WinDouble2" Content="Win" HorizontalAlignment="Left" Margin="0,434,0,0" VerticalAlignment="Top" Checked="WinDouble2_Checked"/>
+            <RadioButton Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name="PlaceDouble2" Content="Place" HorizontalAlignment="Left" Margin="114,434,0,0" VerticalAlignment="Top" Checked="PlaceDouble2_Checked"/>
+            <RadioButton Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name ="LoseDouble2" Content="Lose" HorizontalAlignment="Left" Margin="229,434,0,0" VerticalAlignment="Top" Checked="LoseDouble2_Checked"/>
+            <RadioButton Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Name="NRDouble2" Content="N/R" HorizontalAlignment="Left" Margin="338,434,0,0" VerticalAlignment="Top" Checked="NRDouble2_Checked"/>
+        </Grid>
+
+        <Grid x:Name ="RadioButton_Group2"  Grid.Row="1" Margin="12,0,12,0">
+            <RadioButton x:Name="Quarter_OddsDouble1_Copy" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Content="1/4" HorizontalAlignment="Left" Margin="235,355,0,0" VerticalAlignment="Top" Checked="Quarter_OddsDouble1_Copy_Checked" />
+            <RadioButton x:Name="Fifth_OddsDouble1_Copy" Foreground="Lime" FontStyle="Italic" FontWeight="Bold" Content="1/5" HorizontalAlignment="Left" Margin="332,355,0,0" VerticalAlignment="Top" Height="71" Checked="Fifth_OddsDouble1_Copy_Checked" />
+        </Grid>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>
